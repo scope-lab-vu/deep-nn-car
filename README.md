@@ -7,17 +7,17 @@ An RC car built to work autonomously by taking in images from a front facing cam
 We also introduce a middleware framework which allow for seamless integration of safety controllers and different
 simplex strategies to aid the LEC driven system. 
 
-*** Operating Modes***
+***Operating Modes***
 *****
 The different operating modes of DeepNNCar are:
-1) Data collection mode: This mode allows us to control the car using xbox controller. We collect images, steering (pwm) and speed (pwm) for training the CNN.
-2) Live stream mode: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car.
-3) Autonomous mode: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
+1) **Data collection mode**: This mode allows us to control the car using xbox controller. We collect images, steering (pwm) and speed (pwm) for training the CNN.
+2) **Live stream mode**: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car.
+3) **Autonomous mode**: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
 
 **Sensors**
 *****
-1) Webcamera: To collect front facing images at 30 FPS with a resolution of (320x240x3).
-2) IR Opto-Coupler speed sensor: Attached at the rear wheel of the RC car to count the number of revolutions, which is used for speed calculations. 
+1) **Webcamera**: To collect front facing images at 30 FPS with a resolution of (320x240x3).
+2) **IR Opto-Coupler speed sensor**: Attached at the rear wheel of the RC car to count the number of revolutions, which is used for speed calculations. 
 
 **Actuation controls**
 *****
