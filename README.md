@@ -11,7 +11,7 @@ simplex strategies to aid the LEC driven system.
 
 # Video
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/t85WKP4ReVk)
+[![CNN](https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/track1a.png)](https://youtu.be/t85WKP4ReVk)
 
 # Operating Modes
 
