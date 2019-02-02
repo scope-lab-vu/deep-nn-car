@@ -1,6 +1,6 @@
 # DeepNNCar
 
-![DeepNNCar](https://github.com/scope-lab-vu/deep-nn-car/blob/master/car.png=centerme){width="200" height="200"}
+![DeepNNCar](https://github.com/scope-lab-vu/deep-nn-car/blob/master/car.png=centerme)
 
 An RC car built to work autonomously, which steers based on end-to-end learning, i.e. the car uses a front camera to make decisions on steering. DeepNNCar has an onboard raspberry pi which acts as the server for the car control. A ZMQ communication is set up between the server (RPi) and the client (laptop) for controlling the car for non-autonomous purposes. Speed of the car is measured using an optocoupler which is attached to the chasis near the rear wheel of the car. Both the speed and steering are controlled interms of internal pwm values of the RPi.
 
@@ -8,48 +8,40 @@ The steering is controlled using a Convolutional Neural Network model which take
 
 There are two modes of operation which includes, a manual mode for training data collection , and the autonomous mode for testing the end-to-end learning. Besides these two modes there are other features like ACC controller with variable set speed control, live stream mode to see the car path.
 
-**Inputs**
-1)Images from a front facing camera.
-2)Speed measurements from optocoupler attached to the rear wheel. 
+**Sensors**
+*****
+1) Webcamera - To collect front facing images at 30 FPS with a resolution of (320x240x3).
+2) IR Opto-Coupler speed sensor - Attached at the rear wheel of the RC car to count the number of revolutions, which is used for speed calculations. 
 
-**Output controls**
-
-1) Throttle Position:
-2) Speed
-3) Steering:
+**Actuation controls**
+*****
+1) Speed pwm\
+2) Steering pwm
 
 **Hardware Components**
-
+*****
 Raspberry Pi 3B\
 Creative camera\
 xbox one controller
 
-**Software Required**
+Please refer to the Bill of Material for building DeepNNCar  https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
 
-Raspbian stretch\
-opencv 3.4 / opencv 2.4\
-Tensorflow v
+**Installation**
+*****
+Install the following packages
 
-**Installing Opencv 2.4 on Raspberry Pi 3B**
+Install Raspbian stretch using ```https://www.raspberrypi.org/downloads/```
 
-http://bennycheung.github.io/raspberry-pi-3-for-computer-vision
+Follow the link to install opencv 3.4 
+```
+https://www.alatortsev.com/2018/04/27/installing-opencv-on-raspberry-pi-3-b/
+```
 
-sudo apt-get upate\
-sudo apt-get upgrade\
-sudo apt-get install python-setuptools\
-sudo apt-get install python-pip\
-sudo apt-get install ipython python-opencv python-scipy python-numpy python-pygame
-
-**Installing Opencv 3.4 on Raspberry Pi 3B**
-
-https://github.com/ys7yoo/PiOpenCV
-
-**Startup**
-
-SSH to Rpi\
-Run sudo python TCP_Server.py on server\
-Run sudo python XBOX-360-Controller.py on client\
-Click START on controller to begin data collection
+Install Tensorflow v 1.9
+```
+sudo apt install libatlas-base-dev
+pip3 install tensorflow
+```
 
 
-The Bill of Material for building DeepNNCar is available at https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
+
