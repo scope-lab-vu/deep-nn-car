@@ -1,6 +1,6 @@
 # DeepNNCar
 
-![DeepNNCar](https://github.com/scope-lab-vu/deep-nn-car/blob/master/car.png)
+![DeepNNCar](https://github.com/scope-lab-vu/deep-nn-car/blob/master/car.png=centerme)
 
 An RC car built to work autonomously, which steers based on end-to-end learning, i.e. the car uses a front camera to make decisions on steering. DeepNNCar has an onboard raspberry pi which acts as the server for the car control. A ZMQ communication is set up between the server (RPi) and the client (laptop) for controlling the car for non-autonomous purposes. Speed of the car is measured using an optocoupler which is attached to the chasis near the rear wheel of the car. Both the speed and steering are controlled interms of internal pwm values of the RPi.
 
