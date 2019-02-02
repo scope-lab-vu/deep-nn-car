@@ -1,4 +1,4 @@
-# DeepNNCar
+# DeepNNCar: Testbed for Autonomous driving
 
 <p align="center">
    <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/car.png" align="center" width="600" height="400">
