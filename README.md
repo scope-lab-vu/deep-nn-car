@@ -11,6 +11,11 @@ simplex strategies to aid the LEC driven system.
 
 # Video
 
+<div align="center">
+  <a href="https://youtu.be/t85WKP4ReVk"><img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/track1a.png" alt="DeepNNCar driving with CNN"></a>
+</div>
+
+
 [![CNN](https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/track1a.png)](https://youtu.be/t85WKP4ReVk)
 
 # Operating Modes
