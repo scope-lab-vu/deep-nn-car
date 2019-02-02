@@ -70,3 +70,7 @@ Follow the link to install pigpio library for configuring the hardware interrupt
 http://abyz.me.uk/rpi/pigpio/download.html
 ```
 
+# Acknowledgement
+
+Some of the source code and the Tensorflow version of NVIDIA's CNN model were taken from DeepPiCar (https://github.com/mbechtel2/DeepPicar-v2) and MIT's deeptesla (https://github.com/lexfridman/deeptesla).
+
