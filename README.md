@@ -60,11 +60,26 @@ Follow the link to install opencv 3.4
 https://www.alatortsev.com/2018/04/27/installing-opencv-on-raspberry-pi-3-b/
 ```
 
-Install Tensorflow v 1.9
+Install Tensorflow v1.9
 ```
 sudo apt install libatlas-base-dev
 pip3 install tensorflow
 ```
+Install the latest version of keras
+```
+sudo apt-get install python3-numpy
+sudo apt-get install libblas-dev
+sudo apt-get install liblapack-dev
+sudo apt-get install python3-dev 
+sudo apt-get install libatlas-base-dev
+sudo apt-get install gfortran
+sudo apt-get install python3-setuptools
+sudo apt-get install python3-scipy
+sudo apt-get update
+sudo apt-get install python3-h5py
+sudo pip3 install keras 
+```
+
 Follow the link to install pigpio library for configuring the hardware interrupts.
 ```
 http://abyz.me.uk/rpi/pigpio/download.html
