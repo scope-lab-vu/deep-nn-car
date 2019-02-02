@@ -9,6 +9,10 @@ An RC car built to work autonomously by taking in images from a front facing cam
 We also introduce a middleware framework which allow for seamless integration of safety controllers and different
 simplex strategies to aid the LEC driven system. 
 
+# Video
+
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/t85WKP4ReVk)
+
 # Operating Modes
 
 The different operating modes of DeepNNCar are:
