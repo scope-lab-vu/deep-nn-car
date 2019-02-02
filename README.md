@@ -1,6 +1,6 @@
 # DeepNNCar
 
-![DeepNNCar](https://github.com/scope-lab-vu/deep-nn-car/blob/master/car.png)
+![DeepNNCar](https://github.com/scope-lab-vu/deep-nn-car/blob/master/car.png =200x100)
 
 An RC car built to work autonomously by taking in images from a front facing camera and predicting the steering using CNN (modified version of NVIDIA's DAVE II model). DeepNNCar has an onboard raspberry pi which acts as the server for the car control. A ZMQ communication is set up between the server (RPi) and the client (laptop) for controlling the car for non-autonomous purposes. 
 
@@ -15,6 +15,8 @@ The different operating modes of DeepNNCar are:
 3) **Autonomous mode**: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
 
 # Sensors and Actuations
+
+**Sensors**
 
 1) **Webcamera**: To collect front facing images at 30 FPS with a resolution of (320x240x3).
 2) **IR Opto-Coupler speed sensor**: Attached at the rear wheel of the RC car to count the number of revolutions, which is used for speed calculations. 
