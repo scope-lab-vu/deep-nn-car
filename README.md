@@ -35,8 +35,8 @@ The different operating modes of DeepNNCar are:
 
 **Actuation controls**
 
-1) Speed pwm
-2) Steering pwm
+1) **Speed PWM**: PWM ranges from (15,15.8) which corresponds to speed (0,1) m/s.
+2) **Steering PWM**: PWM ranges from (10,20) which corresponds to an angle range of (-30,30) degrees.
 
 # Components for building DeepNNCar
 
