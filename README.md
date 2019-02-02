@@ -11,12 +11,13 @@ simplex strategies to aid the LEC driven system.
 
 # Video
 
+The video shows DeepNNCar using CNN to autonomously drive along with a PID controller to run at different speeds. From the video it can be seen that DeepNNCar cuts the track at higher speeds of (~0.5 m/s - 0.6 m/s).
+
 <div align="center">
   <a href="https://youtu.be/t85WKP4ReVk"><img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/track1a.png" alt="DeepNNCar driving with CNN"></a>
 </div>
 
-
-[![CNN](https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/track1a.png)](https://youtu.be/t85WKP4ReVk)
+Videos of DeepNNCar running with different controllers, and simplex strategies (AM-Simplex, RL-Simplex) on different tracks can be found at https://drive.google.com/drive/folders/1R1zYEBODPiILqDugScLen24LZi1txLj9?usp=sharing 
 
 # Operating Modes
 
