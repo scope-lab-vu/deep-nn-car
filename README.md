@@ -8,28 +8,28 @@ We also introduce a middleware framework which allow for seamless integration of
 simplex strategies to aid the LEC driven system. 
 
 # Operating Modes
-*****
+
 The different operating modes of DeepNNCar are:
 1) **Data collection mode**: This mode allows us to control the car using xbox controller. We collect images, steering (pwm) and speed (pwm) for training the CNN.
 2) **Live stream mode**: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car.
 3) **Autonomous mode**: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
 
 # Sensors and Actuations
-*****
+
 1) **Webcamera**: To collect front facing images at 30 FPS with a resolution of (320x240x3).
 2) **IR Opto-Coupler speed sensor**: Attached at the rear wheel of the RC car to count the number of revolutions, which is used for speed calculations. 
 
 **Actuation controls**
-*****
+
 1) Speed pwm
 2) Steering pwm
 
 # Components for building DeepNNCar
-*****
+
 Please refer to the Bill of Material for building DeepNNCar  https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
 
 # Installation
-*****
+
 Install the following packages and dependencies
 
 ```
