@@ -2,7 +2,7 @@
 
 This directory has scripts used for training, testing and evaluating the CNN models.
 
-***Keras**
+***Keras***
 This has the modified DAVE-II CNN model along with the training, validation and evaluation scripts.
 
 ***TF***
