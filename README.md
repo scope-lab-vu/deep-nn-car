@@ -4,9 +4,9 @@
    <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/car.png" align="center" width="600" height="400">
 </p>
 
-An RC car built to work autonomously by taking in images from a front facing camera and predicting the steering using CNN (modified version of NVIDIA's DAVE II model). DeepNNCar has an onboard raspberry pi which acts as the server for the car control. A ZMQ communication is set up between the server (RPi) and the client (laptop) for controlling the car for non-autonomous purposes. 
+DeepNNCar is built upon the chassis of Traxxas Slash 2WD 1/10 Scale RC car which uses Raspberry Pi 3b (RPi3) as the onboard computing unit. It works autonomously by using a CNN (modified version of NVIDIA's DAVE II model) which takes in images from a front facing camera, speed (PWM) from an IR opto-coupler speed sensor to predict the steering (PWM). The onboard RPi3 which acts as the server for the car control, and a ZMQ communication is set up between the server (RPi3) and the client (laptop) for controlling the car for non-autonomous purposes. 
 
-We also introduce a middleware framework which allow for seamless integration of safety controllers and different
+We have also implemented a middleware framework which allow for seamless integration of safety controllers and different
 simplex strategies to aid the LEC driven system. Some other additional features of the framework is resource management, and dynamic task offloading.
 
 # Video
@@ -22,7 +22,7 @@ Videos of DeepNNCar running with different controllers, and simplex strategies (
 # Operating Modes
 
 The different operating modes of DeepNNCar are:
-1) **Data collection mode**: This mode allows us to control the car using xbox controller. We collect images, steering (pwm) and speed (pwm) for training the CNN.
+1) **Data collection mode**: In this mode the car is manually driven using xbox controller to collect images, steering (PWM) and speed (PWM) for training the CNN.
 2) **Live stream mode**: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car.
 3) **Autonomous mode**: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
 
