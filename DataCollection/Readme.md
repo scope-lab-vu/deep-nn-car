@@ -25,12 +25,9 @@ Note: Add the correct RPi3 ip address to start the wireless communication.
 Has all the scripts to be run on the RPi3. Server.py is the main script which connects with the client and it has all the funtions to collect sensor data and storing them onboard till the script is terminated. On termination the data is writen to a folder in the USB. Along with the main scripts there are other dependecy scripts for GPIO configuration, RPM measurement and speed calculations, image capture from webcam, etc.
 
 ***Startup***
-
+```
 SSH to Rpi
-
 Run sudo python Server.py on server (run on RPi3)
-
 Run python controller.py on client (run on windows)
-
-Click START on controller to begin data collection. (X button on the xbox controller)
-
+Press START on controller to begin data collection. (X button on the xbox controller)
+```
