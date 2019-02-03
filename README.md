@@ -10,10 +10,10 @@ We have also implemented a middleware framework which allow for seamless integra
 simplex strategies to aid the LEC driven system. Some other additional features of the framework is resource management, and dynamic task offloading.
 
 ***Tracks***
-Different indoor tracks were designed using 10x12 blue tarps. These tracks were used for training and testing during our experiments.
+Different indoor tracks were designed using 10x12 blue tarps. These tracks were used for training and testing during our experiments. These tracks can be designed for experimentation using blue tarps and white tape to design the lanes.
 
 <p align="center">
-   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/tracks.png" align="center" width="500" height="300">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/tracks.png" align="center" width="600" height="200">
 </p>
 
 # Video
