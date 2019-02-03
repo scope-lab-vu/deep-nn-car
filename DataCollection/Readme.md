@@ -3,7 +3,7 @@
 Images, steer(PWM) and speed(PWM) data is collected using xbox controller. This mode works using the client-server shown below.
 
 <p align="center">
-   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/architecture.png" align="center" width="500" height="250">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/architecture.png" align="center" width="600" height="300">
 </p>
 
 # Different buttons of the xbox controller
@@ -11,6 +11,6 @@ Images, steer(PWM) and speed(PWM) data is collected using xbox controller. This 
 The different buttons configured on the xbox controller are shown in the figure.
 
 <p align="center">
-   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/controller.PNG" align="center" width="400" height="200">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/controller.PNG" align="center" width="500" height="250">
 </p>
 
