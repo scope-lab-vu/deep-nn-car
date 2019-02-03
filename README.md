@@ -13,7 +13,7 @@ simplex strategies to aid the LEC driven system. Some other additional features 
 Different indoor tracks were designed using 10x12 blue tarps. These tracks were used for training and testing during our experiments.
 
 <p align="center">
-   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/car.png" align="center" width="300" height="500">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/tracks.png" align="center" width="500" height="300">
 </p>
 
 # Video
