@@ -26,8 +26,11 @@ Has all the scripts to be run on the RPi3. Server.py is the main script which co
 
 ***Startup***
 
-SSH to Rpi\
-Run sudo python Server.py on server (run on RPi3)\ 
-Run python controller.py on client (run on windows)\ 
+SSH to Rpi
+
+Run sudo python Server.py on server (run on RPi3)
+
+Run python controller.py on client (run on windows)
+
 Click START on controller to begin data collection. (X button on the xbox controller)
 
