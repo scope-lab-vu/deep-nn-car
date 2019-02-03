@@ -40,7 +40,7 @@ The different operating modes of DeepNNCar are:
 
 # Components for building DeepNNCar
 
-Please refer to the Bill of Material for building DeepNNCar  https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
+Please refer to the Bill of Material for building DeepNNCar https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
 
 # Installation
 
