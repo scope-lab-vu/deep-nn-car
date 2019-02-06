@@ -4,7 +4,7 @@ Images, steer(PWM) and speed(PWM) data is collected using xbox controller. This 
 Note: This part of the data collection mode uses TCP for wireless communication, however for the rest of the autonomous driving we have moved to ZMQ.
 
 <p align="center">
-   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/architecture.png" align="center" width="600" height="300">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/architecture2.png" align="center" width="600" height="300">
 </p>
 
 # Different buttons of the xbox controller
