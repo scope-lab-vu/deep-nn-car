@@ -93,7 +93,7 @@ http://abyz.me.uk/rpi/pigpio/download.html
 ```
 Install ZeroMQ (ZMQ)
 
-ZMQ package with python bindings can be installed using the following equation.
+ZMQ package with python bindings can be installed using the following installation commands.
 ```
   sudo apt-get install python-dev
   sudo pip install pyzmq
