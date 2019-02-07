@@ -103,6 +103,8 @@ ZMQ package with python bindings can be installed using the following installati
 
 Similar installation of Tensorflow and Keras is required on the client for training and validation of the CNN. ZMQ installation is required for the server-client setup we have for perfroming experiments with DeepNNCar. Also, OpenCV is required for preprocessing images during the training of CNN, and also during image processing used in the safety protocols. 
 
+***Note***: It is important to have same versions of Tensorflow and keras on both the server and client. As the trained CNN model from the client is going to be used in RPi3 for predictions, it is important to have matching versions. We had problems with backward compatibility, i.e. we trained the CNN on a higher version and tried to run it on RPi3 with a lower version which did not work. 
+
 # Acknowledgement
 
 Some of the source code and the Tensorflow version of NVIDIA's CNN model were taken from DeepPiCar (https://github.com/mbechtel2/DeepPicar-v2) and MIT's deeptesla (https://github.com/lexfridman/deeptesla).
