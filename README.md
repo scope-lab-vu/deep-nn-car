@@ -49,7 +49,7 @@ The different operating modes of DeepNNCar are:
 
 Please refer to the Bill of Material for building DeepNNCar https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
 
-# Installation
+# Installations on RPi3
 
 Install the following packages and dependencies
 
@@ -62,7 +62,7 @@ Follow the link to download the Raspbian stretch image and copy it onto an SD ca
 
 ```https://www.raspberrypi.org/documentation/installation/installing-images/```
 
-Follow the link to install opencv 3.4 
+Follow the link to install OpenCV 3.4 
 ```
 https://www.alatortsev.com/2018/04/27/installing-opencv-on-raspberry-pi-3-b/
 ```
@@ -91,6 +91,15 @@ Follow the link to install pigpio library for configuring the hardware interrupt
 ```
 http://abyz.me.uk/rpi/pigpio/download.html
 ```
+Install ZeroMQ (ZMQ)
+ZMQ package with python bindings can be installed using the following equation.
+```
+  sudo apt-get install python-dev
+  sudo pip install pyzmq
+```
+
+# Installations on the Client
+Similar installation of Tensorflow and Keras is required on the client for training and validation of the CNN. ZMQ installation is required for the server-client setup we have for perfroming experiments with DeepNNCar. Also, OpenCV is required for preprocessing images during the training of CNN, and also during image processing used in the safety protocols. 
 
 # Acknowledgement
 
