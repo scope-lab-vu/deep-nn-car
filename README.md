@@ -92,6 +92,7 @@ Follow the link to install pigpio library for configuring the hardware interrupt
 http://abyz.me.uk/rpi/pigpio/download.html
 ```
 Install ZeroMQ (ZMQ)
+
 ZMQ package with python bindings can be installed using the following equation.
 ```
   sudo apt-get install python-dev
@@ -99,6 +100,7 @@ ZMQ package with python bindings can be installed using the following equation.
 ```
 
 # Installations on the Client
+
 Similar installation of Tensorflow and Keras is required on the client for training and validation of the CNN. ZMQ installation is required for the server-client setup we have for perfroming experiments with DeepNNCar. Also, OpenCV is required for preprocessing images during the training of CNN, and also during image processing used in the safety protocols. 
 
 # Acknowledgement
