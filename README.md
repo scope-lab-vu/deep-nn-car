@@ -91,9 +91,7 @@ Follow the link to install pigpio library for configuring the hardware interrupt
 ```
 http://abyz.me.uk/rpi/pigpio/download.html
 ```
-Install ZeroMQ (ZMQ)
-
-ZMQ package with python bindings can be installed using the following installation commands.
+Install ZeroMQ (ZMQ) package with python bindings using the following installation commands.
 ```
   sudo apt-get install python-dev
   sudo pip install pyzmq
