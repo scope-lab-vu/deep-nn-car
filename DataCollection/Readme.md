@@ -19,12 +19,10 @@ The different buttons configured on the xbox controller are shown in the figure.
 
 ***Client***
 It has all the scripts needed to be run on the client side. The controller.py script has all the buttons configured to control the car. The code used for the xbox controller is compatible for windows and hence this can be run on any editor in windows. The PlotTools.py script is used for live plotting of the speed, steering and 2d trajectory of the car. (which can be seen on the laptop)
-
 ***Note***: Add the correct RPi3 ip address to start the wireless communication. Also, scripts on the client use python2, because of the way we have configured the image transfer on the client side. However, we are updating the code base to use python3.
 
 ***Server***
 Has all the scripts to be run on the RPi3. Server.py is the main script which connects with the client and it has all the funtions to collect sensor data and storing them onboard till the script is terminated. On termination the data is writen to a folder in the USB. Along with the main scripts there are other dependecy scripts for GPIO configuration, RPM measurement and speed calculations, image capture from webcam, etc.
-
 ***Note***: All scripts on the RPi3 uses python3.
 
 ***Startup***
