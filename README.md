@@ -99,7 +99,7 @@ ZMQ package with python bindings can be installed using the following installati
   sudo pip install pyzmq
 ```
 
-# Installations on the Client
+# Installations on the Client (Desktop or Laptop)
 
 Similar installation of Tensorflow and Keras is required on the client for training and validation of the CNN. ZMQ installation is required for the server-client setup we have for perfroming experiments with DeepNNCar. Also, OpenCV is required for preprocessing images during the training of CNN, and also during image processing used in the safety protocols. 
 
