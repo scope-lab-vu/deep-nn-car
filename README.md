@@ -119,9 +119,9 @@ Some interesting papers used during our work.
 
 4) Application of software health management techniques (https://dl.acm.org/citation.cfm?id=1988010)
 
-# Citation
+# Research with DeepNNCar
 
-The paper on DeepNNCar "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://128.84.21.199/abs/1902.02432
+The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://128.84.21.199/abs/1902.02432
 
 
 
