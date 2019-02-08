@@ -99,11 +99,23 @@ Install ZeroMQ (ZMQ) package with python bindings using the following installati
 
 # Installations on the Client (Desktop or Laptop)
 
-Similar installation of Tensorflow and Keras is required on the client for training and validation of the CNN. ZMQ installation is required for the server-client setup we have for perfroming experiments with DeepNNCar. Also, OpenCV is required for preprocessing images during the training of CNN, and also during image processing used in the safety protocols. 
+Similar installation of Tensorflow and Keras is required on the client for training and validation of the CNN. ZMQ installation is required for the server-client setup we have for perfroming experiments with DeepNNCar. Also, OpenCV is required for preprocessing images during the training of CNN, and also during image processing used in the safety protocols.
+
+We would recommend the use of Ubuntu 18.04 (on Virtual Machine or Ubuntu instalation) for training the CNN and performing autonomous drivng experiments on the client. However, the data collection mode would require windows installation as the scripts used to configure xbox one controller is compatible with windows.
 
 ***Note***: It is important to have same versions of Tensorflow and keras on both the server and client. As the trained CNN model from the client is going to be used in RPi3 for predictions, it is important to have matching versions. We had problems with backward compatibility, i.e. we trained the CNN on a higher version and tried to run it on RPi3 with a lower version which did not work. 
 
 # Acknowledgement
 
 Some of the source code and the Tensorflow version of NVIDIA's CNN model were taken from DeepPiCar (https://github.com/mbechtel2/DeepPicar-v2) and MIT's deeptesla (https://github.com/lexfridman/deeptesla).
+
+Some interesting papers used during our work.
+
+1) DeepPicar: A Low-cost Deep Neural Network-based Autonomous Car (https://arxiv.org/abs/1712.08644)
+
+2) Arguing Machines: Human Supervision of Black Box AI Systems That Make Life-Critical Decisions (https://arxiv.org/abs/1710.04459)
+
+3) A Component-Based Simplex Architecture for High-Assurance Cyber-Physical Systems (https://arxiv.org/abs/1704.04759)
+
+4) Application of software health management techniques (https://dl.acm.org/citation.cfm?id=1988010)
 
