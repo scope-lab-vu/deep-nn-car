@@ -105,6 +105,11 @@ We would recommend the use of Ubuntu 18.04 (on Virtual Machine or Ubuntu instala
 
 ***Note***: It is important to have same versions of Tensorflow and keras on both the server and client. As the trained CNN model from the client is going to be used in RPi3 for predictions, it is important to have matching versions. We had problems with backward compatibility, i.e. we trained the CNN on a higher version and tried to run it on RPi3 with a lower version which did not work. 
 
+# Research with DeepNNCar
+
+The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://128.84.21.199/abs/1902.02432
+
+
 # Acknowledgement
 
 Some of the source code and the Tensorflow version of NVIDIA's CNN model were taken from DeepPiCar (https://github.com/mbechtel2/DeepPicar-v2) and MIT's deeptesla (https://github.com/lexfridman/deeptesla).
@@ -119,9 +124,6 @@ Some interesting papers used during our work.
 
 4) Application of software health management techniques (https://dl.acm.org/citation.cfm?id=1988010)
 
-# Research with DeepNNCar
-
-The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://128.84.21.199/abs/1902.02432
 
 
 
