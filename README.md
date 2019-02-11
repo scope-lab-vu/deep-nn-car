@@ -63,6 +63,18 @@ Please refer to the Bill of Material for building DeepNNCar https://docs.google.
 
 The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://128.84.21.199/abs/1902.02432
 
+Citation
+
+```
+@misc{ramakrishna2019augmenting,
+    title={Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots},
+    author={Shreyas Ramakrishna and Abhishek Dubey and Matthew P Burruss and Charles Hartsell and Nagabhushan Mahadevan and Saideep Nannapaneni and Aron Laszka and Gabor Karsai},
+    year={2019},
+    eprint={1902.02432},
+    archivePrefix={arXiv},
+    primaryClass={cs.AI}
+}
+```
 
 # Acknowledgement
 
