@@ -33,6 +33,10 @@ The different operating modes of DeepNNCar are:
 2) **Live stream mode**: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car.
 3) **Autonomous mode**: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
 
+# Important Links
+
+Components and assembly of DeepNnCar can be found at: [Components and Assembly](https://github.com/scope-lab-vu/deep-nn-car/wiki/Components-and-Assembly)
+
 Some other Safety features implemented on DeepNNCar can be found at: [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
 
 # Sensors and Actuations
