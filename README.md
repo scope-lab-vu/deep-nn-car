@@ -59,62 +59,6 @@ Some common errors we encountered during our experiments is discussed in [Troubl
 
 Please refer to the Bill of Material for building DeepNNCar https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
 
-# Installations on RPi3
-
-Install the following packages and dependencies
-
-```
-sudo apt-get install python3
-sudo apt-get install python3-pip
-```
-
-Follow the link to download the Raspbian stretch image and copy it onto an SD card.
-
-```https://www.raspberrypi.org/documentation/installation/installing-images/```
-
-Follow the link to install OpenCV 3.4 
-```
-https://www.alatortsev.com/2018/04/27/installing-opencv-on-raspberry-pi-3-b/
-```
-
-Install Tensorflow v1.9
-```
-sudo apt install libatlas-base-dev
-pip3 install tensorflow
-```
-Install the latest version of keras
-```
-sudo apt-get install python3-numpy
-sudo apt-get install libblas-dev
-sudo apt-get install liblapack-dev
-sudo apt-get install python3-dev 
-sudo apt-get install libatlas-base-dev
-sudo apt-get install gfortran
-sudo apt-get install python3-setuptools
-sudo apt-get install python3-scipy
-sudo apt-get update
-sudo apt-get install python3-h5py
-sudo pip3 install keras 
-```
-
-Follow the link to install pigpio library for configuring the hardware interrupts.
-```
-http://abyz.me.uk/rpi/pigpio/download.html
-```
-Install ZeroMQ (ZMQ) package with python bindings using the following installation commands.
-```
-  sudo apt-get install python-dev
-  sudo pip install pyzmq
-```
-
-# Installations on the Client (Desktop or Laptop)
-
-Similar installation of Tensorflow and Keras is required on the client for training and validation of the CNN. ZMQ installation is required for the server-client setup we have for perfroming experiments with DeepNNCar. Also, OpenCV is required for preprocessing images during the training of CNN, and also during image processing used in the safety protocols.
-
-We would recommend the use of Ubuntu 18.04 (on Virtual Machine or Ubuntu instalation) for training the CNN and performing autonomous drivng experiments on the client. However, the data collection mode would require windows installation as the scripts used to configure xbox one controller is compatible with windows.
-
-***Note***: It is important to have same versions of Tensorflow and keras on both the server and client. As the trained CNN model from the client is going to be used in RPi3 for predictions, it is important to have matching versions. We had problems with backward compatibility, i.e. we trained the CNN on a higher version and tried to run it on RPi3 with a lower version which did not work. 
-
 # Research with DeepNNCar
 
 The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://128.84.21.199/abs/1902.02432
