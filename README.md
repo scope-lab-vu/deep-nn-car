@@ -33,16 +33,6 @@ The different operating modes of DeepNNCar are:
 2) **Live stream mode**: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car.
 3) **Autonomous mode**: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
 
-# Important Links
-
-Components and assembly of DeepNNCar can be found at: [Components and Assembly](https://github.com/scope-lab-vu/deep-nn-car/wiki/Components-and-Assembly)
-
-Configuring the server and client setup for DeepNNCar can be performed by following the instructions at [Configuring server and client](https://github.com/scope-lab-vu/deep-nn-car/wiki/Configuring-the-Server-and-Client)
-
-Some Safety features implemented on DeepNNCar are discussed in: [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
-
-Some common errors we encountered during our experiments is discussed in [Troubleshooting common errors](https://github.com/scope-lab-vu/deep-nn-car/wiki/Troubleshooting)
-
 # Sensors and Actuations
 
 **Sensors**
@@ -54,6 +44,16 @@ Some common errors we encountered during our experiments is discussed in [Troubl
 
 1) **Speed PWM**: PWM ranges from (15,15.8) which corresponds to speed (0,1) m/s.
 2) **Steering PWM**: PWM ranges from (10,20) which corresponds to an angle range of (-30,30) degrees.
+
+# Important Links
+
+Components and assembly of DeepNNCar can be found at: [Components and Assembly](https://github.com/scope-lab-vu/deep-nn-car/wiki/Components-and-Assembly)
+
+Configuring the server and client setup for DeepNNCar can be performed by following the instructions at [Configuring server and client](https://github.com/scope-lab-vu/deep-nn-car/wiki/Configuring-the-Server-and-Client)
+
+Some Safety features implemented on DeepNNCar are discussed in: [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
+
+Some common errors we encountered during our experiments is discussed in [Troubleshooting common errors](https://github.com/scope-lab-vu/deep-nn-car/wiki/Troubleshooting)
 
 # Components for building DeepNNCar
 
