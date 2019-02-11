@@ -39,9 +39,9 @@ Components and assembly of DeepNnCar can be found at: [Components and Assembly](
 
 Configuring the server and client can be performed by following the instructions at [Configuring server and client](https://github.com/scope-lab-vu/deep-nn-car/wiki/Configuring-the-Server-and-Client)
 
-Some other Safety features implemented on DeepNNCar can be found at: [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
+Some Safety features implemented on DeepNNCar are discussed in: [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
 
-Some common errors we encountered during our experiments is discussed in [Troubleshooting common eroors](https://github.com/scope-lab-vu/deep-nn-car/wiki/Troubleshooting)
+Some common errors we encountered during our experiments is discussed in [Troubleshooting common errors](https://github.com/scope-lab-vu/deep-nn-car/wiki/Troubleshooting)
 
 # Sensors and Actuations
 
