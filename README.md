@@ -53,7 +53,7 @@ Configuring the server and client setup for DeepNNCar can be performed by follow
 
 Some Safety features implemented on DeepNNCar are discussed in [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
 
-DIfferent acceleration protocols implemented in DeepNNCar can be found at [Acceleration protocols](https://github.com/scope-lab-vu/deep-nn-car/blob/master/acceleration.pdf) the code for which is [Controller.py]()
+DIfferent acceleration protocols implemented in DeepNNCar can be found at [Acceleration protocols](https://github.com/scope-lab-vu/deep-nn-car/blob/master/acceleration.pdf) the code for which is [Controller.py](https://github.com/scope-lab-vu/deep-nn-car/blob/master/DataCollection/Client/controller.py)
 
 Some common errors we encountered during our experiments is discussed in [Troubleshooting common errors](https://github.com/scope-lab-vu/deep-nn-car/wiki/Troubleshooting)
 
