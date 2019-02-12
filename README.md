@@ -51,7 +51,9 @@ Components and assembly of DeepNNCar can be found at: [Components and Assembly](
 
 Configuring the server and client setup for DeepNNCar can be performed by following the instructions at [Configuring server and client](https://github.com/scope-lab-vu/deep-nn-car/wiki/Configuring-the-Server-and-Client)
 
-Some Safety features implemented on DeepNNCar are discussed in: [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
+Some Safety features implemented on DeepNNCar are discussed in [DeepNNCar Safety Features](https://github.com/scope-lab-vu/deep-nn-car/wiki/DeepNNCar-features)
+
+DIfferent acceleration protocols implemented in DeepNNCar can be found at [Acceleration protocols](https://github.com/scope-lab-vu/deep-nn-car/blob/master/acceleration.pdf) the code for which is [Controller.py]()
 
 Some common errors we encountered during our experiments is discussed in [Troubleshooting common errors](https://github.com/scope-lab-vu/deep-nn-car/wiki/Troubleshooting)
 
