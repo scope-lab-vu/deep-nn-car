@@ -1,4 +1,8 @@
-# Data collection using xbox controller
+# Data collection using mouse control (new method)
+Images, steer(PWM) and speed(PWM) data is collected using mouse control. 
+
+
+# Data collection using xbox controller (old method)
 
 Images, steer(PWM) and speed(PWM) data is collected using xbox controller. This mode works using the client-server shown below. 
 Note: This part of the data collection mode uses TCP for wireless communication, however for the rest of the autonomous driving we have moved to ZMQ.
@@ -7,7 +11,7 @@ Note: This part of the data collection mode uses TCP for wireless communication,
    <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/architecture2.png" align="center" width="600" height="300">
 </p>
 
-# Different buttons of the xbox controller
+***Different buttons of the xbox controller***
 
 The different buttons configured on the xbox controller are shown in the figure.
 
@@ -15,7 +19,7 @@ The different buttons configured on the xbox controller are shown in the figure.
    <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/Xbox%20Controller.PNG" align="center" width="600" height="300">
 </p>
 
-# Client and Server
+***Client and Server scripts***
 
 ***Client***
 It has all the scripts needed to be run on the client side. The controller.py script has all the buttons configured to control the car. The code used for the xbox controller is compatible for windows and hence this can be run on any editor in windows. The PlotTools.py script is used for live plotting of the speed, steering and 2d trajectory of the car. (which can be seen on the laptop)
