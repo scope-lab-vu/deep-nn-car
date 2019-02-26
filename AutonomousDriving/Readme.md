@@ -1,6 +1,6 @@
 # Autonomous Driving Mode
 
-This mode allows you to drive DeepNNCar using the trained CNN. It allows you to select any one of the Simplex Architectures which includes the AM-Simplex or RL-Simplex (explained in https://arxiv.org/abs/1902.02432)
+This mode allows you to drive DeepNNCar using the trained CNN. It allows you to select any one of the Simplex Architectures which includes the AM-Simplex or RL-Simplex (explained in https://arxiv.org/abs/1902.02432). To run this mode you will need the trained CNN. 
 
 The code base uses the component based architecture shown below.
 
@@ -9,7 +9,7 @@ The code base uses the component based architecture shown below.
 </p>
 
 
-[Autonomous.py](https://github.com/scope-lab-vu/deep-nn-car/blob/master/AutonomousDriving/Autonomous.py) is the main script that has to be run on the RPi3 (use python3). 
+[Autonomous.py](https://github.com/scope-lab-vu/deep-nn-car/blob/master/AutonomousDriving/Autonomous.py) is the main script that has to be run on the RPi3 (use python3). Running this script will allow you to select different simplex architectures and also stores data for plotting and further processing.
 
 ```
 sudo python3 Autonomous.py
@@ -49,4 +49,8 @@ If you select exploitation, you will be asked for
 rounds: Number of rounds you want the car to run
 ```
 
+Note: Do not forget to run the pigpio library before any execution
+```
+sudo pigpiod
+```
 
