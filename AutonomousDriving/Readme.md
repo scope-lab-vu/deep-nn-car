@@ -54,4 +54,4 @@ Note: Do not forget to run the pigpio library before any execution
 ```
 sudo pigpiod
 ```
-The rest of the scripts have dependency scripts to run Autonomous.py.
+The rest of the scripts in this directory are all dependencies required to run Autonomous.py.
