@@ -4,6 +4,9 @@ This mode allows you to drive DeepNNCar using the trained CNN. It allows you to 
 
 The code base uses the component based architecture shown below.
 
+<p align="center">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/car.png" align="center" width="600" height="400">
+</p>
 
 
 [Autonomous.py](https://github.com/scope-lab-vu/deep-nn-car/blob/master/AutonomousDriving/Autonomous.py) is the main script that has to be run on the RPi3 (use python3). 
