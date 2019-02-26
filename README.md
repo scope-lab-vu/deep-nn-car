@@ -29,9 +29,9 @@ Videos of DeepNNCar running with different controllers, and simplex strategies (
 # Operating Modes
 
 The different operating modes of DeepNNCar are:
-1) **Data collection mode**: In this mode the car is manually driven using xbox controller to collect images, steering (PWM) and speed (PWM) for training the CNN.
-2) **Live stream mode**: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car.
-3) **Autonomous mode**: The trained CNN model is used to predict the steering, and speed can be controlled by a PID controller. Alternatively we have introduced different simplex strategies (AM-Simplex, RL-Simplex) which can be used to drive the car autonomously.
+1) **Data collection mode**: In this mode the car is manually driven using xbox controller (old method) or a mouse (new method) to collect images, steering (PWM) and speed (PWM) for training the CNN. The scripts for setting up the data collection mode can be found in [Data Collection](https://github.com/scope-lab-vu/deep-nn-car/tree/master/DataCollection)
+2) **Live stream mode**: This modes allows us to relay images taken by the car as a video stream to the laptop. In addition we have live plotting of speed, steering and 2D position of the car. The live stream option is integrated with the manual driving or data collection mode. The commands to execute the live stream option can be found in [Data Collection](https://github.com/scope-lab-vu/deep-nn-car/tree/master/DataCollection)
+3) **Autonomous mode**: Drives DeepNNCar autonomously using the [trained CNN] model. THe user can use different simplex strategies (AM-Simplex, RL-Simplex) to drive the car autonomously. The scripts and instructions for autonomous mode excution can be found at [Autonomous mode]()
 
 # Sensors and Actuations
 
