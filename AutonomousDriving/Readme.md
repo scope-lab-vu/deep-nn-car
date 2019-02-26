@@ -5,7 +5,7 @@ This mode allows you to drive DeepNNCar using the trained CNN. It allows you to 
 The code base uses the component based architecture shown below.
 
 <p align="center">
-   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/Blockdiagram.png" align="center" width="600" height="400">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/Blockdiagram.png" align="center" width="500" height="300">
 </p>
 
 
