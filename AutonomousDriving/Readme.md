@@ -48,9 +48,10 @@ If you select exploitation, you will be asked for
 ```
 rounds: Number of rounds you want the car to run
 ```
+Data will be stored automatically for the number of rounds specified by the user. This data will be copied into a csv file and can be stored in any desired directory. 
 
 Note: Do not forget to run the pigpio library before any execution
 ```
 sudo pigpiod
 ```
-
+The rest of the scripts have dependency scripts to run Autonomous.py.
