@@ -1,7 +1,6 @@
 # Author: Matthew P. Burruss
 # Last Updated: 2/14/2019
 # Deciphers network messages
-
 import numpy as np
 class CommunicationProtocol:
     def __init__(self):
@@ -17,9 +16,9 @@ class CommunicationProtocol:
     def getSpeed(self):
         return self.messageComponents["SPEED"]
     def getCPUUtilization(self):
-        return self.messageComponents["CPU"]
+        return float(self.messageComponents["CPU"])
     def getTemperature(self):
-        return self.messageComponents["TEMP"]
+        return float(self.messageComponents["TEMP"])
     def getDisplacement(self):
         return self.messageComponents["DISPLACEMENT"]
     def getHeading(self):
@@ -60,7 +59,11 @@ class CommunicationProtocol:
     def getMode(self):
         return self.messageComponents["MODE"]
     def getOperationModeFeatures(self):
-        return self.messageComponents["OPERATIONMODEFEATURES"]
+        numFeatures = int(self.messageComponents["NUMOPERATIONMODEFEATURE"])
+        features = []
+        for i in range(numFeatures):
+            features.append(self.messageComponents["OPERATIONMODEFEATURE" + str(i)])
+        return features
 
     def isSpeedSensorEnabled(self):
         enabled = self.messageComponents["SPEEDSENSOR"]

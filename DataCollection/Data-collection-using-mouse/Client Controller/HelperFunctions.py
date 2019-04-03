@@ -1,14 +1,13 @@
 from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
 import os
-def sendToGoogleDrive(fileName,filePath,pathToClientSecrets="ADDFILETOJSON"):
+def sendToGoogleDrive(fileName,filePath,pathToClientSecrets="c:/Users/Matthew Burruss/Documents/Github/DeepNNCar V2/DeepNNCar/client_secrets.json"):
     gauth = GoogleAuth()
     gauth.LoadClientConfigFile(pathToClientSecrets)  # <-----
 
     drive = GoogleDrive(gauth)
 
-    folder_id = 'ADD GOOGLE DRIVE FOLDER ID'
-    
+    folder_id = '1OqZVOYfXlEPRKfL1Q_mPWAmEUBlzlt7C'
     file1 = drive.CreateFile({
         'title': fileName,
         "mimeType": "text/csv",
@@ -17,6 +16,7 @@ def sendToGoogleDrive(fileName,filePath,pathToClientSecrets="ADDFILETOJSON"):
     file1.SetContentFile(filePath)
     file1.Upload()
     print("Dataset uploaded")
+    print(filePath)
     #os.remove(filePath)
     #print("Dataset removed from local machine")
 
@@ -50,15 +50,17 @@ def selectOperationMode():
 
 def configureDataCollection():
     trialNumber = raw_input("Enter the number of trials: ")
-    return trialNumber
+    return (trialNumber)
 
 def configureAutonomousMode():
     finished = False
     lanedetection = False
+    blurrinessmeasurement = False
     offloading = False
     while not finished:
         if not lanedetection: print("A: Enable lane detection")
         if not offloading: print("B: Enable offloading")
+        if not blurrinessmeasurement: print("C: Enable blurriness measurement")
         print("1: Enable all features")
         print("2: Finished")
         userInput = raw_input()
@@ -67,15 +69,18 @@ def configureAutonomousMode():
             lanedetection = True
         elif (userInput == "b"):
             offloading = True
+        elif(userInput == "c"):
+            blurrinessmeasurement = True
         elif(userInput == "1"):
             lanedetection = True
             offloading = True
+            blurrinessmeasurement = True
             finished = True
         elif(userInput == "2"):
             finished = True
         else:
             print("Invalid selection")
-    return lanedetection,offloading
+    return (lanedetection,offloading,blurrinessmeasurement)
 
 def selectAccelerationProtocol():
     selectedMode = False

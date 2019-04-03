@@ -13,6 +13,7 @@ import time
 from ctypes import Structure, byref, c_long, windll
 from threading import Thread,Lock
 from HelperFunctions import sendToGoogleDrive,displayTitle,selectOperationMode,selectAccelerationProtocol,configureAutonomousMode,configureConstantDC,configureConstantDC,configureFeedback,configureDataCollection,configureCruiseControl
+#import psutil
 import cv2
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
@@ -51,6 +52,8 @@ class DeepNNCarController:
         self.heading = 0.0
         self.steeringAngle = 0
         self.accelerationDutyCycle = 15
+        self.temp = 0.0
+        self.cpuUtil = 0.0
         signal.signal(signal.SIGINT, self.signal_handler) # looks for control-c
     def start(self):
         # begin communication thread
@@ -83,7 +86,6 @@ class DeepNNCarController:
             frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
             cv2.imshow('Live Feed',frame)
             cv2.waitKey(33)
-            
     def selectCapabilities(self, operationMode,operationModeFeatures,accMode,accModeFeatures,tempEnabled,pathTrackingEnabled,speedSensorEnabled,cpuUtilEnabled):
         self.speedSensorEnabled = speedSensorEnabled # true or false
         self.pathTrackerEnabled = pathTrackingEnabled # true or false
@@ -101,7 +103,11 @@ class DeepNNCarController:
             message += ";CPUTRACKER=" + str(cpuUtilEnabled)
             message += ";ACCMODE=" + accMode
             message += ";MODE=" + operationMode
-            message += ";OPERATIONMODEFEATURES=" + str(operationModeFeatures)
+            message += ";NUMOPERATIONMODEFEATURE=" + str(len(operationModeFeatures))
+            i = 0
+            for feature in operationModeFeatures:
+                message += ";OPERATIONMODEFEATURE" + str(i) + "=" + str(feature)
+                i=i+1
             message += ";ACCMODEFEATURES=" + str(accModeFeatures)
             self.sock.send(message.encode())
             message = self.sock.recv()
@@ -124,21 +130,25 @@ class DeepNNCarController:
             print("SPEEDSENSOR: DISABLED")
             print("PATHTRACKER: DISABLED")
         if (self.cpuTrackingEnabled):
-            print("CPUTRACKER: Add Feature")
+            print("CPUTRACKER: %0.2f" %self.cpuUtil)
         else:
             print("CPUTRACKER: DISABLED")
         if (self.tempTrackingEnabled):
-            print("TEMPTRACKER: Add Feature")
+            print("TEMPTRACKER: %0.2f" %self.temp)
         else:
             print("TEMPTRACKER: DISABLED")
         print("\n")
     
     # return filename of csv file of trial
     def handleDataCollection(self,numberOfTrials):
-        trialFrames = []
         trialTimes = []
         trialAcc = []
         trialSteer = []
+        time = datetime.utcnow().strftime('%Y%m%d%H%M%S%f')[:-3]
+        fileName = "Data" + time + ".csv"
+        csvfile = open(fileName, "wb")
+        writer=csv.writer(csvfile)
+        writer.writerow([numberOfTrials])
         for i in range(numberOfTrials):
             print("Received sample: %d" %i)
             message = "READY"
@@ -146,22 +156,18 @@ class DeepNNCarController:
             image_encoded = self.sock.recv()
             frame = np.fromstring(image_encoded, np.uint8)
             frame = np.resize(frame,(240,320,3))
-            cv2.imshow('Live Feed',frame)
-            cv2.waitKey(33)
+            frame = cv2.resize(frame, (200, 66))
+            frame = np.reshape(frame,(3,13200)) # maximum excel sheet is 16384 columns and 1,048,576 rows
+            frame_as_list = frame.tolist()
+            writer.writerows(frame_as_list)
             self.sock.send(message.encode())
             response = self.sock.recv()
             self.messageDecoder.decodeMessage(response.decode())
             timestamp = self.messageDecoder.getTimestamp()
             acc,steer = self.messageDecoder.getControl()
-            trialFrames.append(frame)
             trialTimes.append(timestamp)
             trialAcc.append(acc)
             trialSteer.append(steer)
-        time = datetime.utcnow().strftime('%Y%m%d%H%M%S%f')[:-3]
-        fileName = "Data" + time + ".csv"
-        csvfile = open(fileName, "w")
-        writer=csv.writer(csvfile)
-        writer.writerow(trialFrames)
         writer.writerow(trialTimes)
         writer.writerow(trialAcc)
         writer.writerow(trialSteer)
@@ -190,7 +196,8 @@ class DeepNNCarController:
                 filename,filepath = self.handleDataCollection(numberOfTrials)
                 sendToGoogleDrive(filename,filepath)
                 print("Saved to googled drive.")
-            elif (self.speedSensorEnabled): 
+                continue
+            if (self.speedSensorEnabled): 
                 self.speed = float(self.messageDecoder.getSpeed())
                 if (self.pathTrackerEnabled):
                     x,y = self.messageDecoder.getPositionCoordinates()
@@ -198,7 +205,10 @@ class DeepNNCarController:
                     self.heading = round(float(self.messageDecoder.getHeading()),2)
                     self.lx.append(x)
                     self.ly.append(y)
-
+            if (self.tempTrackingEnabled):
+                self.temp = self.messageDecoder.getTemperature()
+            if (self.cpuTrackingEnabled):
+                self.cpuUtil = self.messageDecoder.getCPUUtilization()
             if (stopSignalSent):
                 stopped = True
             time.sleep(0.03)
@@ -258,7 +268,7 @@ class DeepNNCarController:
     def configure(self):
         displayTitle()
         operationMode = selectOperationMode()
-        operationModeFeatues = None
+        operationModeFeatues = (None,)
         if (operationMode == "AUTO"):
             operationModeFeatues = configureAutonomousMode()
         elif (operationMode == "DATACOLLECTION"):
@@ -277,7 +287,7 @@ class DeepNNCarController:
 
 
 if __name__=="__main__":
-    controller = DeepNNCarController(IP = "10.66.221.95",Port = "5001", maxForwardRange = 1)
+    controller = DeepNNCarController(IP = "10.66.234.14",Port = "5001", maxForwardRange = 1)
     config = controller.configure()
     controller.selectCapabilities(config[0],config[1],config[2],config[3],config[4],config[5],config[6],config[7])
     controller.start()

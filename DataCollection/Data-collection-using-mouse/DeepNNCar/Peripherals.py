@@ -4,7 +4,8 @@ import signal
 import time
 import math
 import cv2
-
+import os
+import psutil
 # author: Matthew P. Burruss
 # last Updated 2/15/2019
 # Controls the slot type IR sensor
@@ -12,7 +13,7 @@ import cv2
 class SpeedSensor:
     def __init__(self):
         self.gpioPinIRSensor = 21
-        self.diameterOfWheel = 80 #mm
+        self.diameterOfWheel = 73.44 #mm
         # init gpio pin for IR sensor
         GPIO.setmode(GPIO.BCM)
         GPIO.setwarnings(False)
@@ -101,7 +102,7 @@ class Camera:
         self.cap.set(int(4),height)
         self.cap.set(int(5),fps)
         self.cap.set(int(12),100)
-        self.cap.set(int(7),100)
+        #self.cap.set(int(7),100)
 
     def release(self):
         print("Cleaning camera...")
@@ -112,3 +113,30 @@ class Camera:
         if (ret == False): print("ERROR: Unable to capture frame.")
         return frame
 
+class SystemMonitor:
+    # delay controls how often it actually reads
+    # by decreasing delay, the temperature and CPU will be read
+    # more often but their will be additional overhead
+    def __init__(self,delay,cpuTrackingEnabled,tempTrackingEnabled):
+        self.nextRead = time.time() + delay
+        self.delay = delay
+        self.temp = self.getCPUtemperature()
+        self.cpuUsage = self.getCPUuse()
+        self.cpuTrackingEnabled = cpuTrackingEnabled
+        self.tempTrackingEnabled = tempTrackingEnabled
+
+    def run(self):
+        if (self.nextRead < time.time()):
+            if (self.tempTrackingEnabled): self.temp = self.getCPUtemperature()
+            if (self.cpuTrackingEnabled): self.cpuUsage = self.getCPUuse()
+            self.nextRead = time.time() + self.delay
+        return self.temp,self.cpuUsage
+    # Return CPU temperature as a character string                                      
+    def getCPUtemperature(self):
+        res = os.popen('vcgencmd measure_temp').readline()
+        return float(res.replace("temp=","").replace("'C\n",""))
+
+    # Return % of CPU used by user as a character string                                
+    def getCPUuse(self):
+        return float(os.popen("top -n1 | awk '/Cpu\(s\):/ {print $2}'").readline().strip(\
+    ))
