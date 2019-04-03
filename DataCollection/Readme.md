@@ -1,6 +1,28 @@
 # Data collection using mouse control (new method)
 Images, steer(PWM) and speed(PWM) data is collected using mouse control. 
 
+Data collection using the mouse features the ability to automatically upload the dataset to a specified google drive folder upon data collection termination.
+## Getting Started
+1. Change the IP address in the main to the IP address of DeepNNCar
+2. Download client_secrets.json by following tutorial at https://developers.google.com/api-client-library/python/start/get_started and in /Controller/HelperFunctions.py update the path to the client_secrets.json
+3. Change the folder_id in the sendToGoogleDrive function to the desired google drive where you would like the dataset to go. To find the google drive id, navigate to the URL and copy and paste the final string... for example "1OqZVOYfXlEPRKfL1Q_mPWAmEUBlzlt7C"
+3. SSH into DeepNNCar with "ssh pi@<IP Address>
+4. scp the clients_json
+5. On DeepNNCar, execute command "sudo pigpiod"
+7. Find file ./DeepNNCar/DeepNNCar.py
+8. Run "sudo python DeepNNCar.py"
+9. On client computer, run "sudo python3 Controller.py"
+## Configure DeepNNCar
+1. Follow prompts which include selecting autonomous mode, data collection mode, live stream mode, or normal operation
+2. Select speed protocol: user controlled, cruise controlled (set speed in m/s), constant duty cycle (constant throttle)
+3. Enable and disable live feedback features including temperature monitoring, path tracking, speed sensor, or CPU utilization.
+4. Configure specific modes: For autonomous mode you can select safety manager operations and for data collection you can specify the number of trials
+## Collecting Data
+1. Select data collection mode
+2. Enter the number of trials you want to collect
+3. Collect data... server will print to command line every 5th data point collected
+4. After, collection, data is sent to client computer
+5. Client writes data to a csv file and uploads the file to a specified google drive folder
 
 # Data collection using xbox controller (old method)
 
