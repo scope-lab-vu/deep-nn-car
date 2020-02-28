@@ -1,7 +1,9 @@
 
 # DeepNNCar papers from ISORC 2019
 
-The papers using the DeepNNCar platform are: (1) "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://ieeexplore.ieee.org/abstract/document/8759270
+The papers using the DeepNNCar platform are: 
+
+(1) "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://ieeexplore.ieee.org/abstract/document/8759270
 
 (2) "DeepNNCar: A Testbed for Deploying and Testing Middleware Frameworks for Autonomous Robots" can be found at https://ieeexplore.ieee.org/abstract/document/8759365
 
