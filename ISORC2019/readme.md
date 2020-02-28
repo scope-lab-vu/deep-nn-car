@@ -26,4 +26,4 @@ Citation
   organization={IEEE}
 }
 ```
-#Data for plots can be found at [plot-data]()
+#Data for plots can be found at [plot-data](https://github.com/scope-lab-vu/deep-nn-car/tree/master/ISORC2019/Plot-data)
