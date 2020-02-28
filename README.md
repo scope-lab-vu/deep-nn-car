@@ -1,7 +1,7 @@
 # DeepNNCar: A Testbed for Autonomous driving
 
 <p align="center">
-   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/car.png" align="center" width="600" height="400">
+   <img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/new-car1.pdf" align="center" width="600" height="400">
 </p>
 
 DeepNNCar is built upon the chassis of Traxxas Slash 2WD 1/10 Scale RC car which uses Raspberry Pi 3b (RPi3) as the onboard computing unit. It works autonomously by using a CNN (modified version of NVIDIA's DAVE II model) which takes in images from a front facing camera, speed (PWM) from an IR opto-coupler speed sensor to predict the steering (PWM). The onboard RPi3 which acts as the server for the car control, and a ZMQ communication is set up between the server (RPi3) and the client (laptop) for controlling the car for non-autonomous purposes. 
