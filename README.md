@@ -61,7 +61,29 @@ Some common errors we encountered during our experiments is discussed in [Troubl
 
 Please refer to the Bill of Material for building DeepNNCar https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
 
+# Getting started
+
+1. To setup the hardware, please see the [following post] https://medium.com/@matthew.p.burruss/deepnncar-a-testbed-for-autonomous-algorithms-b0db1ec4770c
+
+2. SSH into the RPI and execute the following commands (```ssh pi@<IP> ```)
+
+3. Clone the repository
+```
+git clone https://github.com/scope-lab-vu/deep-nn-car.git\
+```
+4. Execute the server code
+```
+cd deep-nn-car/
+sudo pigpiod
+sudo python3 DeepNNCar.py
+```
+
+5. On local machine, first clone the repository. cd into ./Controller and update Controller.py first line of main method to include IP address of the RPI3 (find IP address by running ```ifconfig``` in SSH terminal)
 # Research with DeepNNCar
+
+6. Connect to DeepNNCar server ```python3 Controller.py```
+
+7. Follow configuration prompts
 
 The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://ieeexplore.ieee.org/abstract/document/8759270
 
