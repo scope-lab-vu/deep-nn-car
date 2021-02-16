@@ -63,7 +63,7 @@ Please refer to the Bill of Material for building DeepNNCar [here](https://docs.
 
 # Getting started
 
-1. To setup the hardware, please see the [following post] https://medium.com/@matthew.p.burruss/deepnncar-a-testbed-for-autonomous-algorithms-b0db1ec4770c
+1. To setup the hardware, please see the [following post] (https://medium.com/@matthew.p.burruss/deepnncar-a-testbed-for-autonomous-algorithms-b0db1ec4770c)
 
 2. SSH into the RPI and execute the following commands (```ssh pi@<IP> ```)
 
