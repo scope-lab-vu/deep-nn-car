@@ -24,7 +24,7 @@ The video shows DeepNNCar using CNN to autonomously drive along with a PID contr
   <a href="https://youtu.be/t85WKP4ReVk"><img src="https://github.com/scope-lab-vu/deep-nn-car/blob/master/images/track1a.png" alt="DeepNNCar driving with CNN"></a>
 </div>
 
-Videos of DeepNNCar running with different controllers, and simplex strategies (AM-Simplex, RL-Simplex) on different tracks can be found at https://drive.google.com/drive/folders/1R1zYEBODPiILqDugScLen24LZi1txLj9?usp=sharing
+Videos of DeepNNCar running with different controllers, and simplex strategies (AM-Simplex, RL-Simplex) on different tracks can be found [here]( https://drive.google.com/drive/folders/1R1zYEBODPiILqDugScLen24LZi1txLj9?usp=sharing)
 
 # Operating Modes
 
@@ -59,7 +59,7 @@ Some common errors we encountered during our experiments is discussed in [Troubl
 
 # Components for building DeepNNCar
 
-Please refer to the Bill of Material for building DeepNNCar https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing
+Please refer to the Bill of Material for building DeepNNCar [here](https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing)
 
 # Getting started
 
@@ -85,7 +85,7 @@ sudo python3 DeepNNCar.py
 
 7. Follow configuration prompts
 
-The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found at https://ieeexplore.ieee.org/abstract/document/8759270
+The paper using DeepNNCar platform "Augmenting Learning Components for Safety in Resource Constrained Autonomous Robots" can be found [here]( https://ieeexplore.ieee.org/abstract/document/8759270)
 
 Citation
 
