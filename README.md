@@ -59,7 +59,7 @@ Some common errors we encountered during our experiments is discussed in [Troubl
 
 # Components for building DeepNNCar
 
-Please refer to the Bill of Material for building DeepNNCar [here](https://docs.google.com/spreadsheets/d/1azQ_Xp9dUmQdm99CKqNXR3qQcVDEEUmMNGrfDghjG6c/edit?usp=sharing)
+Please refer to the Bill of Material for building DeepNNCar [here](https://github.com/scope-lab-vu/deep-nn-car/blob/master/DeepNNCar%20BOM%202019.xlsx)
 
 # Getting started
 
